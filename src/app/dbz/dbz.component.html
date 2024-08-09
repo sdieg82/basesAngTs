@@ -1,0 +1,18 @@
+<h1>Main Page</h1>
+<hr>
+<div class="row">
+    
+    <div class="col">
+        <app-list [characterList]="dbzService.characters" (onDelete)="onDeleteCharacter($event)"> 
+        </app-list>
+    </div>
+    
+    
+    
+    <div class="col">
+        <app-dbz-form (onNewCharacter)="dbzService.onNewEventCharacter($event)">
+
+        </app-dbz-form>
+        
+    </div>
+</div>

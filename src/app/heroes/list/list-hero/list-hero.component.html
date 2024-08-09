@@ -1,0 +1,13 @@
+<h3>Listado de Héroes</h3>
+
+<ul class="mt-2 list-group py-2">
+    <li *ngFor="let list of heroNames" class="list-group-item">{{list}} </li>
+  
+</ul>
+<button *ngIf="heroNames.length>0 else noDeleted " class=" bg-danger text-white" (click)=eraseLastHero()>Borrar úlimo Héroe</button>
+
+<ng-template #noDeleted>
+    <h4>No se ha borrado nada</h4>
+</ng-template>
+
+<h3 class="py-4" *ngIf="heroNames.length>0" >Heroe borrado es : <small class="text-danger "> {{removedHero}} </small> </h3>

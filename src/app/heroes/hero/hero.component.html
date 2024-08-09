@@ -1,0 +1,29 @@
+<h1>Frameworks</h1>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>  
+
+  <td>Telefono:</td>
+  <dd>{{cellphone}}</dd> 
+
+  <td>Metodo:</td>
+  <dd>{{changeHeroDescription()}}</dd>   
+
+  <button 
+  *ngIf="name!=='REACTJS'"
+  (click)=changeName()>
+    Cambiar nombre
+  </button>
+
+  <button class=" text-black" (click)=reset()>
+    Resetear
+  </button>
+
+  <button class=" text-black" (click)=changeNumber()>
+    Cambiar número
+  </button> 
+
+</dl>
